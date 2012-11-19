@@ -61,16 +61,19 @@ ul {
 	padding: 0px;
 	margin-right: 40px;
 	float: left;
+	.clear;
 
 	li {
 		list-style: none;
-	}	
+	}
 }
 
-.clear:after { // CLEARFIX
+.clear {
+	&:after { // CLEARFIX
 	content: "";
 	display: table;
 	clear: both;
+	}
 }
 
 .container { //TU JE DEKLARIRANA ŠIRINA
@@ -119,6 +122,20 @@ ul {
 	//3d stuff
 	transform-style: preserve-3d; //ZA FLIP
 	transition: transform 120ms ease; //EASING
+}
+
+@keyframes zoom {
+	from { transform: scale(1.0);}
+	to { transform: scale(2.0);}
+}
+
+.maxed {
+	animation-name: zoom;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	//width: 400px;
+	//height: 400px;
+	//transition: width 1s ease, height 1s ease;
 }
 
 .selected { // ZELENI BORDER

@@ -67,6 +67,10 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
+	//$(".test").on("mouseup", function(e) {
+	//	$(this).find('.tile').toggleClass('maxed');
+	//});
+
 	//$(window).resize(function() {
 	//	resize();
 	//	console.log(w+', '+h);
