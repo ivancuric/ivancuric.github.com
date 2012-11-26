@@ -62,6 +62,18 @@ $(document).ready(function() {
 		mousedown = 0;
 	});
 
+	$('.target').on('mouseup', function(e) {
+		if (e.which==1) {
+			$(this).toggleClass("active");
+			//$(this).css('marginLeft', -$(this).width()/2 + 'px');
+			//$(this).css('marginTop', -$(this).height()/2 + 'px');
+			$(".wrapper").toggleClass("hide");
+		}
+		
+		
+		mousedown = 0;
+	});
+
 	$(".container").on("contextmenu", function(e) {
 		$(this).find('.tile').toggleClass('selected');
 		e.preventDefault();
